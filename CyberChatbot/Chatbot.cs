@@ -11,9 +11,9 @@ namespace CybersecurityChatbot
 
     public class Chatbot : IChatbot
     {
-        // =============================
+
         // EMOTIONS
-        // =============================
+      
         static readonly (string[] keys, ConsoleColor col, string[] lines)[] Emotions =
         {
             (new string[] { "happy","great","good mood","joyful","cheerful","wonderful","fantastic","feeling good" },
