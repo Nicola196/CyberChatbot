@@ -1,0 +1,30 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    defaults:
+      run:
+        working-directory: ./CyberChatbot   # ✅ correct folder
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    # ❌ REMOVED nuget restore (causes your error)
+
+    - name: Build
+      run: msbuild CyberChatbot.csproj /p:Configuration=Release
+
+    - name: Test
+      run: echo "No tests configured"
