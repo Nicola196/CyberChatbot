@@ -178,7 +178,7 @@ namespace CybersecurityChatbot
             }
 
             // DEFAULT
-            AnimateResponse("I did not understand that.");
+            AnimateResponse("I didn't quite get that.");
             AnimateResponse("Type 'help' to see options.");
         }
 
