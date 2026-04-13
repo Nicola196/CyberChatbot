@@ -19,7 +19,7 @@ namespace CybersecurityChatbot
             (new string[] { "happy","great","good mood","joyful","cheerful","wonderful","fantastic","feeling good" },
              ConsoleColor.Yellow,
              new string[] {
-                 "That is wonderful to hear! Your positive energy is contagious!",
+                 "That is exciting to hear coming from you! Your positive energy lights up the room!",
                  "A happy mindset combined with good cyber habits is unstoppable."
              }),
 
