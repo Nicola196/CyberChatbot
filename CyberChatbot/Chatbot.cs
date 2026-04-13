@@ -13,8 +13,8 @@ namespace CybersecurityChatbot
     {
 
         // EMOTIONS
-      
-        static readonly (string[] keys, ConsoleColor col, string[] lines)[] Emotions =
+
+        /*static readonly (string[] keys, ConsoleColor col, string[] lines)[] Emotions =
         {
             (new string[] { "happy","great","good mood","joyful","cheerful","wonderful","fantastic","feeling good" },
              ConsoleColor.Yellow,
@@ -51,47 +51,63 @@ namespace CybersecurityChatbot
                  "Cybersecurity is one of the most exciting and relevant skills today. Let's dive in!"
              })
         };
+        */
 
         // =============================
         // TOPICS
         // =============================
         static readonly Dictionary<string, (string intro, string[] opts, string[][] det)> Topics =
-            new Dictionary<string, (string, string[], string[][])>()
-        {
-            {
-                "cybersecurity",
-                ("Cybersecurity protects computers, networks, and data from digital attacks.",
-                new string[] {
-                    "1. Why is it important?",
-                    "2. What are cyber threats?",
-                    "3. How does it protect me?"
-                },
-                new string[][]
-                {
-                    new string[] { "SA has one of the highest cybercrime rates in Africa. Attacks cause financial loss and data breaches." },
-                    new string[] { "Phishing: fake messages. Malware: harmful software. Ransomware: locks files for payment." },
-                    new string[] { "Antivirus removes threats. Firewalls block access. Encryption scrambles your data." }
-                })
-            },
+      new Dictionary<string, (string, string[], string[][])>()
+  {
+     {
+         "cybersecurity",
+         ("Cybersecurity protects computers, networks, and data from digital attacks.",
+         new string[] {
+             "1. Why is it important?",
+             "2. What are cyber threats?",
+             "3. How does it protect me?"
+         },
+         new string[][]
+         {
+             new string[] { "SA has one of the highest cybercrime rates in Africa. Attacks cause financial loss and data breaches." },
+             new string[] { "Phishing: fake messages. Malware: harmful software. Ransomware: locks files for payment." },
+             new string[] { "Antivirus removes threats. Firewalls block access. Encryption scrambles your data." }
+         })
+     },
 
-            {
-                "phishing",
-                ("Phishing emails are fake messages designed to trick you into giving away personal information.",
-                new string[] {
-                    "1. How do I spot one?",
-                    "2. What do I do if I receive one?",
-                    "3. What makes them convincing?"
-                },
-                new string[][]
-                {
-                    new string[] { "Sender email looks wrong (e.g. paypa1.com). Creates urgency. Contains spelling mistakes." },
-                    new string[] { "Do NOT click links or attachments. Report as phishing. If you clicked, change passwords immediately." },
-                    new string[] { "They copy real logos and layouts. Use your real name. Create fear so you act without thinking." }
-                })
-            }
-        };
+     {
+         "phishing",
+         ("Phishing emails are fake messages designed to trick you into giving away personal information.",
+         new string[] {
+             "1. How do I spot one?",
+             "2. What do I do if I receive one?",
+             "3. What makes them convincing?"
+         },
+         new string[][]
+         {
+             new string[] { "Sender email looks wrong (e.g. paypa1.com). Creates urgency. Contains spelling mistakes." },
+             new string[] { "Do NOT click links or attachments. Report as phishing. If you clicked, change passwords immediately." },
+             new string[] { "They copy real logos and layouts. Use your real name. Create fear so you act without thinking." }
+         })
+     },
 
-        // =============================
+     {
+         "password",
+         ("Passwords are the first line of defense against unauthorized access to your online accounts.",
+         new string[] {
+             "1. What makes a strong password?",
+             "2. Why shouldn't I reuse passwords?",
+             "3. How do hackers steal passwords?"
+         },
+         new string[][]
+         {
+             new string[] { "Use at least 12 characters. Mix uppercase, lowercase, numbers, and symbols. Avoid common words or personal info." },
+             new string[] { "If one site is breached, hackers try that password on your other accounts. Use a password manager instead." },
+             new string[] { "Brute force attacks guess millions of combos. Keyloggers record your typing. Phishing tricks you into revealing it." }
+         })
+     }
+  };
+        // ============================= 
         // MAIN PROCESS
         // =============================
         public void ProcessInput(string input)
@@ -102,7 +118,7 @@ namespace CybersecurityChatbot
             string lower = input.ToLowerInvariant();
 
             // STEP 1: Emotion detection
-            foreach (var emotion in Emotions)
+            /*foreach (var emotion in Emotions)
             {
                 foreach (string key in emotion.keys)
                 {
@@ -124,6 +140,7 @@ namespace CybersecurityChatbot
                 }
             }
 
+            */
             // STEP 2: Help / greeting
             if (lower == "help" || lower.Contains("what can you do"))
             {

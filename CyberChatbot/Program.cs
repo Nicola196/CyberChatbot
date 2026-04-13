@@ -70,7 +70,7 @@ namespace CybersecurityChatbot
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.Write("\n" + user.Name + ": "); Console.ResetColor();
                 string input = Console.ReadLine();
-                // Reject blank input
+                // Reject blank answers
                 if (string.IsNullOrWhiteSpace(input))
                 { AnimateText("Bot: Please enter something so I can assist you.", ConsoleColor.Red); continue; }
                 // Handle exit command
