@@ -3,7 +3,7 @@
 namespace Cyber_securityChatbot
 {
 
-    /// The User class holds information about the person
+    /// The User class carries all information about the person
     /// currently chatting with the bot. It uses automatic
 
     public class User
