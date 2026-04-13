@@ -13,7 +13,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./CyberChatbot   # ✅ FIXED PATH
+        working-directory: ./CyberChatbot   # ✅ correct folder
 
     steps:
     - uses: actions/checkout@v4
@@ -21,8 +21,7 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
 
-    - name: Restore dependencies
-      run: nuget restore
+    # ❌ REMOVED nuget restore (causes your error)
 
     - name: Build
       run: msbuild CyberChatbot.csproj /p:Configuration=Release
