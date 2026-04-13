@@ -58,7 +58,7 @@ namespace CybersecurityChatbot
         static void StartChatbot(User user)
         {
             // Personalised welcome and topic list
-            AnimateText("\nBot: How can I help you today, " + user.Name + "?", ConsoleColor.Yellow);
+            AnimateText("\nBot: How can i assist you? " + user.Name + "?", ConsoleColor.Yellow);
             AnimateText("Bot: Ask me about: CYBERSECURITY | PHISHING | SUSPICIOUS LINKS | PREVENT PHISHING | REPORT | PASSWORD | BROWSING", ConsoleColor.Cyan);
             AnimateText("Bot: Type 'help' to see topics again. Type 'exit' to quit.", ConsoleColor.Cyan);
 
