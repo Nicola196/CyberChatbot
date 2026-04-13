@@ -117,7 +117,7 @@ namespace CybersecurityChatbot
                         Console.ResetColor();
                         Console.WriteLine();
 
-                        AnimateResponse("Whenever you are ready, I am here to help you stay safe online.");
+                        AnimateResponse("Feel free reach out anytime - I'm here to help you stay safe online.");
                         AnimateResponse("Type 'help' to see what topics I can assist with.");
                         return;
                     }
